@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel:wght@400;700&family=Great+Vibes&family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;700&display=swap");
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 600px; /* Adjust this to control logo size */
+  width: 100%;
+  height: auto;
+}
+.intro {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+/* Make all hyperlinks golden */
+a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e6c200;
+  text-decoration: none;
+}
+
+/* Remove underline from image-only links */
+a img,
+a:hover img {
+  text-decoration: none;
+  border: none;
+}
+
+.clickable-song {
+  color: #ffe08c;
+  text-shadow: 0 0 4px #c76b2e;
+  font-weight: bold;
+}
+
+.clickable-song:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+.song-heading {
+  font-family: "Cinzel", serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #ffd700;
+  text-shadow: 0 0 6px #c76b2e;
+  margin-bottom: 1.5rem;
+}
+
+.nav-item {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: #ebebeb;
+  padding: 1rem;
+  white-space: nowrap;
+  transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+.nav-item:hover {
+  transform: translateY(-4px);
+  text-shadow: 0 0 8px #ffd700, 0 0 12px #e6c200; /* gold glow */
+}
+
+/* Disable hover effect on mobile */
+@media (max-width: 700px) {
+  .nav-item:hover {
+    transform: none;
+    text-shadow: none;
+  }
+}
+
+.song-list ul.responsive-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  justify-items: stretch;
+  align-items: start;
+}
+
+
+  .song-list ul.responsive-list li {
+  background: linear-gradient(to right, #5b5959, #171717);
+  border-radius: 24px; /* Increased from 12px */
+  padding: 1rem 0.75rem;
+  font-size: 1.05rem;
+  text-align: center;
+  font-family: "Lora", serif;
+  color: #ffd700;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.song-list ul.responsive-list li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px #ffd700;
+  cursor: pointer;
+}
+
+.responsive-list li::before,
+.responsive-list li::after {
+  content: ;
+  position: absolute;
+  font-size: 1.25rem;
+  color: #c89e6a;
+  opacity: 0.4;
+}
+
+.responsive-list li::before {
+  top: 6px;
+  left: 10px;
+}
+.responsive-list li::after {
+  bottom: 6px;
+  right: 10px;
+}
+/*
+.container {
+  background-image: linear-gradient(to left, red, black);
+  font-family: "Cinzel", serif;
+  font-size: x-large;
+  font-weight: bold;
+  color: white;
+
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+
+  
+  width: 100%;                
+  box-sizing: border-box;     
+  flex-wrap: wrap;            
+  box-shadow: 6px 0 12px rgba(0, 0, 0, 0.5);
+}
+
+.item,
+.last-item {
+  color: #ebebeb;
+  text-decoration: none;
+}
+
+.item {
+  margin-right: 1rem;
+}
+
+.last-item {
+  margin-left: auto;
+}
+*/
+
+.navbar {
+  background-image: linear-gradient(to left, red, black);
+  font-family: "Cinzel", serif;
+  font-size: x-large;
+  font-weight: bold;
+  color: white;
+  
+
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+  box-shadow: 6px 0 12px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+/* Nav links row */
+.nav-links {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+/* Each nav item stretches equally */
+.nav-item {
+  text-decoration: none;
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: #ebebeb;
+  padding: 1rem;
+  white-space: nowrap;
+  transition: background 0.3s;
+}
+
+/* Hamburger hidden on desktop */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+/* Responsive behavior */
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hamburger {
+    display: block;
+    align-self: flex-end;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    border-top: 2px solid #b87f2e;
+    z-index: 999;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-item {
+    flex: none;
+    width: 100%;
+    text-align: left;
+    padding: 1rem 1.5rem;
+  }
+}
+
+
+
+.banner {
+  font-family: "Cinzel", serif;
+  font-size: x-large;
+  font-weight: bold;
+  text-align: left;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+img.align-left {
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+img.align-right {
+  float: right;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+}
+.divider.full-width {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Content box base */
+.content-box {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-image: url('../images/scuffed-metal.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+
+  border: 3px solid transparent;
+  border-image: linear-gradient(
+    135deg,
+    #ffe08c,
+    #e1b347,
+    #b87f2e,
+    #c76b2e,
+    #e1b347
+  ) 1;
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  color: white;
+  backdrop-filter: blur(6px);
+  box-shadow: 8px 4px 12px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* Flare base */
+.flare {
+  position: absolute;
+  width: 40px;
+  height: auto;
+  pointer-events: none;
+  z-index: 2;
+  
+  
+}
+
+/* Top Left – flipped vertically */
+.flare.top-left {
+  top: 11px;
+  left: 1px;
+  transform: rotate(180deg) scaleY(1) translate(0, 10px);
+}
+
+/* Top Right – flipped both horizontally and vertically */
+.flare.top-right {
+  top: 11px;
+  right: 1px;
+  transform: rotate(180deg) scale(-1, 1) translate(0, 10px);
+}
+
+/* Bottom Left – flipped horizontally */
+.flare.bottom-left {
+  bottom: -5px;
+  left: 1px;
+  transform: scaleX(-1) translate(0, -10px);
+}
+
+/* Bottom Right – rotated and flipped vertically */
+.flare.bottom-right {
+  bottom: 5px;
+  right: 1px;
+  transform: rotate(180deg) scaleY(-1) translate(1, -10px);
+}
+.member-profile h2 {
+  font-family: "Cinzel", serif;
+  font-size: 1.75rem;
+  color: #ffd700; /* gold */
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 6px #c76b2e;
+}
+
+
+
+/* Footer + Social Icons */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background-color: transparent;
+}
+
+.footer .social-icon {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer .social-icon img {
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  height: 32px;
+  width: 32px;
+  margin: 0 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer .social-icon:hover img {
+  filter: drop-shadow(0 0 6px white);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+form {
+  border: 2px solid black;
+  outline: darkslategrey solid 5px;
+  margin: auto;
+  padding: 20px;
+}
+
+body {
+  font-family: "Lora", serif;
+  font-size: 16pt;
+  margin: 20px 10%;
+  padding: 0;
+  background: url("https://www.transparenttextures.com/patterns/dark-mosaic.png"),
+    linear-gradient(to right, #3c3b3b, #1c1c1c);
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+.member-img {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
+}

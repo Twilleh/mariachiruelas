@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   Mariachi Ruelas
+  </title>
+  <meta content="" name="description"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="styles/styles.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div>
+   <img alt="logo" class="logo" src="images/Mariachi_Ruelas_Logo_Cropped.png"/>
+  </div>
+  <nav class="navbar">
+   <div class="hamburger" onclick="toggleMenu()">
+    ☰
+   </div>
+   <div class="nav-links" id="navLinks">
+    <a class="nav-item" href="index.html">
+     Home
+    </a>
+    <a class="nav-item" href="about.html">
+     About
+    </a>
+    <a class="nav-item" href="songs.html">
+     Music
+    </a>
+    <a class="nav-item" href="contactus.html">
+     Contact
+    </a>
+   </div>
+  </nav>
+  <div class="section-divider bottom">
+   <img alt="Bottom Flourish Divider" class="divider full-width" src="images/bottomwide.png"/>
+  </div>
+  <div class="content-box song-list">
+   <h2 class="song-heading">
+    Song List – Lista de Canciones
+   </h2>
+   <img alt="" class="flare top-left" src="images/corner.png"/>
+    <img alt="" class="flare top-right" src="images/corner.png"/>
+    <img alt="" class="flare bottom-left" src="images/corner.png"/>
+    <img alt="" class="flare bottom-right" src="images/corner.png"/>
+   <div class="song-list" id="songList">
+   </div>
+  </div>
+  <div class="footer">
+   <a class="fa fa-facebook" href="https://www.facebook.com/profile.php?id=61554887216705">
+    <img alt="facebook" src="images/Facebook_Logo_Primary.png" style="height: 32px; width: 32px"/>
+   </a>
+   <a class="fa fa-instagram" href="https://www.instagram.com/edgar.ruelas.9/">
+    <img alt="instagram" src="images/Instagram_Glyph_Gradient.png" style="height: 32px; width: 32px"/>
+   </a>
+  </div>
+  <script async="" defer="" src="js/script.js">
+  </script>
+  <script>
+   function toggleMenu() {
+        const menu = document.getElementById("navLinks");
+        menu.classList.toggle("show");
+      }
+  </script>
+ </body>
+</html>

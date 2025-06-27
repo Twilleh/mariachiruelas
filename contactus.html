@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   Mariachi Ruelas
+  </title>
+  <meta content="" name="description"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="styles/styles.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div>
+   <img alt="logo" class="logo" src="images/Mariachi_Ruelas_Logo_Cropped.png"/>
+  </div>
+  <nav class="navbar">
+   <div class="hamburger" onclick="toggleMenu()">
+    ☰
+   </div>
+   <div class="nav-links" id="navLinks">
+    <a class="nav-item" href="index.html">
+     Home
+    </a>
+    <a class="nav-item" href="about.html">
+     About
+    </a>
+    <a class="nav-item" href="songs.html">
+     Music
+    </a>
+    <a class="nav-item" href="contactus.html">
+     Contact
+    </a>
+   </div>
+  </nav>
+  <div class="intro">
+   <h1>
+    Contact/Contacto
+   </h1>
+   
+  </div>
+  <div class="section-divider bottom">
+   <img alt="Bottom Flourish Divider" class="divider full-width" src="images/bottomwide.png"/>
+  </div>
+  <div class="content-box">
+    <img alt="" class="flare top-left" src="images/corner.png"/>
+    <img alt="" class="flare top-right" src="images/corner.png"/>
+    <img alt="" class="flare bottom-left" src="images/corner.png"/>
+    <img alt="" class="flare bottom-right" src="images/corner.png"/>
+   <p>
+    If you would like to get a call from us, please provide us the following
+        information so we can better assist in planning for your event.
+   </p>
+   <p>
+    Si gustas recibir una llamada de nosotros, por favor proviene la
+        siguiente información para poderte asistir mejor en planear para tu
+        evento.
+   </p>
+   <form action="https://formsubmit.co/mariachiruelasie@gmail.com" autocomplete="on" method="POST">
+    <label for="first-name">
+     Name/Nombre
+    </label>
+    <br/>
+    <br/>
+    <input id="first-name" name="first-name" placeholder="name/nombre" required="" type="text"/>
+    <br/>
+    <br/>
+    <label for="last-name">
+     Last Name/Apellido
+    </label>
+    <br/>
+    <br/>
+    <input id="last-name" name="last-name" placeholder="Last Name/Apellido" required="" type="text"/>
+    <br/>
+    <br/>
+    <label for="phone">
+     Phone/Teléfono:
+    </label>
+    <br/>
+    <br/>
+    <input id="phone" name="phone" pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" placeholder="123-457-7890" required="" type="tel"/>
+    <br/>
+    <br/>
+    <label for="date">
+     Event Date/Fecha del Evento:
+    </label>
+    <input id="date" name="date" type="date"/>
+    <input type="submit"/>
+   </form>
+  </div>
+  <br/>
+  <br/>
+  <div class="footer">
+   <a class="social-icon" href="https://www.facebook.com/profile.php?id=61554887216705">
+    <img alt="Facebook" src="images/Facebook_Logo_Primary.png">
+    </img>
+   </a>
+   <a class="social-icon" href="https://www.instagram.com/edgar.ruelas.9/">
+    <img alt="Instagram" src="images/Instagram_Glyph_Gradient.png"/>
+   </a>
+  </div>
+  <script>
+   function toggleMenu() {
+    const menu = document.getElementById('navLinks');
+    menu.classList.toggle('show');
+  }
+  </script>
+ </body>
+</html>
